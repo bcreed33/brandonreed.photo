@@ -164,6 +164,16 @@ background-image:url(../img/photos/photo1.jpg);
 
 
 
-// {
-//     --grid-columns: 16 !important;
-// }
+.gallery-wrapper{
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.gallery-title{
+    background-color: pink;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    margin-bottom: 50px;
+    padding: 15px 0 10px;
+}
