@@ -20,6 +20,7 @@
 #hero-wrapper{
     height: 100vh;
     background-color: rgb(28, 36, 48);
+
 }
 #namePlate{
     background-color: #fff;
@@ -178,30 +179,29 @@ background-image:url(../img/photos/photo1.jpg);
     padding: 15px 0 10px;
 }
 
-.subnav__list{
-    // display: flex;
+.gallery-subnav__list{
+    display: flex;
     // flex-direction: row;
     // justify-content: space-around;
     width: 100%;
-    max-width: 1400px;
-    padding: 10px;
+    padding: 15px;
 }
 
 
-.subnav-container{
+.gallery-subnav-container{
     display: flex;
     flex-direction: row;
     // justify-content: flex-start;
     width: 100%;
 }
-.subnav-title{
+.gallery-subnav-title{
     display: flex;
     // flex: 1;
     // flex-basis: 25%;
     margin-right: 10%;
 }
 
-.subnav-links{
+.gallery-subnav-links{
     display: flex;
     align-items: center;
     .btn{
@@ -213,4 +213,17 @@ background-image:url(../img/photos/photo1.jpg);
 
 .choice-btn-contactFrom{
     width: 49%;
+}
+
+
+.f-header{
+    // border-bottom: 3px blue solid;
+    -webkit-box-shadow: 0 5px 25px 5px rgba(1,1,1,.1);
+box-shadow: 0 5px 25px 5px rgba(1,1,1,.1);
+}
+
+footer{
+    background-color: rgb(61, 61, 61);
+    color: #fff !important;
+    border-top:5px solid orange ;
 }

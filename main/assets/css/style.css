@@ -14375,28 +14375,28 @@ mark {
   padding: 15px 0 10px;
 }
 
-.subnav__list {
+.gallery-subnav__list {
+  display: flex;
   width: 100%;
-  max-width: 1400px;
-  padding: 10px;
+  padding: 15px;
 }
 
-.subnav-container {
+.gallery-subnav-container {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.subnav-title {
+.gallery-subnav-title {
   display: flex;
   margin-right: 10%;
 }
 
-.subnav-links {
+.gallery-subnav-links {
   display: flex;
   align-items: center;
 }
-.subnav-links .btn {
+.gallery-subnav-links .btn {
   display: flex;
   height: 45px;
   margin: 0 15px;
@@ -14404,6 +14404,16 @@ mark {
 
 .choice-btn-contactFrom {
   width: 49%;
+}
+
+.f-header {
+  box-shadow: 0 5px 25px 5px rgba(1, 1, 1, 0.1);
+}
+
+footer {
+  background-color: #3d3d3d;
+  color: #fff !important;
+  border-top: 5px solid orange;
 }
 
 /* -------------------------------- 
