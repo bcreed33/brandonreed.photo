@@ -15,7 +15,10 @@
 
 /*! purgecss start ignore */
 
-
+h3{
+    // color: #fff;
+    font-size: 48px;
+}
 
 #hero-wrapper{
     height: 100vh;
@@ -221,9 +224,57 @@ background-image:url(../img/photos/photo1.jpg);
     -webkit-box-shadow: 0 5px 25px 5px rgba(1,1,1,.1);
 box-shadow: 0 5px 25px 5px rgba(1,1,1,.1);
 }
+.f-header__logo{
+    width: auto !important;
+}
+.headerIG-logo{
+    width: 40px;
+}
 
 footer{
-    background-color: rgb(61, 61, 61);
+    background-color: #202020;
     color: #fff !important;
     border-top:5px solid orange ;
+    .footer-v4__nav-item a{
+        color:#fff;
+        font-size: 22px;
+    }
+    .socials__btns{
+        p{
+            font-size: 48px;
+        color:#fff;
+        }
+        img{
+            width: 40px;
+        }
+    }
+    .footer-v4__print{
+        color: #fff;
+    }
+}
+
+
+.index-gallery-section{
+    background-color: rgba($color: #202020, $alpha: .91);
+    h3{
+        color: #fff;
+
+    }
+    .filter-nav__btn{
+        color: #fff ;
+        
+    }
+    .js-filter-selected button{
+        color: #264b6c;
+    }
+}
+
+.index-galleryCTA-layer{
+    background-color: rgba($color: #264b6c, $alpha: 1);
+    color: #fff;
+    h3{
+        color: #fff;
+        font-size: 48px;
+    }
+
 }
