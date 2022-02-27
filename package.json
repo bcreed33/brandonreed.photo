@@ -45,5 +45,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodyHouse/codyhouse-framework.git"
+  },
+  "dependencies": {
+    "tar": "^6.1.11"
   }
 }
