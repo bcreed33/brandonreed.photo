@@ -188,6 +188,8 @@ background-image:url(../img/photos/photo1.jpg);
     // justify-content: space-around;
     width: 100%;
     padding: 15px;
+    background-color: #fff;
+    border-bottom:solid 5px var(--color-accent-lighter);
 }
 
 
@@ -277,4 +279,10 @@ footer{
         font-size: 48px;
     }
 
+}
+
+
+#product-gallery{
+    min-height: 500px;
+    // background: pink;
 }

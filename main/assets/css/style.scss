@@ -12,3 +12,20 @@
 @use 'custom-style';
 @use 'components/**/*.scss';
 @use 'components/**/*.css';
+
+
+.filter-nav--expanded.filter-nav--v1 .filter-nav__btn {
+  color: var(--color-white);
+
+}
+
+
+.filter-nav--expanded.filter-nav--v1 .filter-nav__btn:hover {
+  color: var(--color-primary-lighter);
+}
+.filter-nav--expanded.filter-nav--v1 .filter-nav__btn[aria-current=true] {
+  color: var(--color-white);
+}
+.filter-nav--expanded.filter-nav--v1 .filter-nav__marker{
+  background-color: var(--color-accent);
+}

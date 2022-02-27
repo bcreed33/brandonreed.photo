@@ -14384,6 +14384,8 @@ h3 {
   display: flex;
   width: 100%;
   padding: 15px;
+  background-color: #fff;
+  border-bottom: solid 5px var(--color-accent-lighter);
 }
 
 .gallery-subnav-container {
@@ -14463,6 +14465,10 @@ footer .footer-v4__print {
 .index-galleryCTA-layer h3 {
   color: #fff;
   font-size: 48px;
+}
+
+#product-gallery {
+  min-height: 500px;
 }
 
 /* -------------------------------- 
@@ -16581,4 +16587,19 @@ Usage: codyhouse.co/license
   .form-template-v3 .form-label {
     font-size: 1em;
   }
+}
+.filter-nav--expanded.filter-nav--v1 .filter-nav__btn {
+  color: var(--color-white);
+}
+
+.filter-nav--expanded.filter-nav--v1 .filter-nav__btn:hover {
+  color: var(--color-primary-lighter);
+}
+
+.filter-nav--expanded.filter-nav--v1 .filter-nav__btn[aria-current=true] {
+  color: var(--color-white);
+}
+
+.filter-nav--expanded.filter-nav--v1 .filter-nav__marker {
+  background-color: var(--color-accent);
 }
