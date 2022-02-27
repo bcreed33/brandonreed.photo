@@ -1,6 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-sass.compiler = require('sass-embedded');
+var sass = require('gulp-sass')(require('sass-embedded'));
 var sassGlob = require('gulp-sass-glob');
 var browserSync = require('browser-sync').create();
 var postcss      = require('gulp-postcss');
@@ -12,12 +11,12 @@ var cleanCSS = require('gulp-clean-css');
 var purgecss = require('gulp-purgecss');
 
 // js file paths
-var utilJsPath = 'main/assets/js'; // util.js path - you may need to update this if including the framework as external node module
+var utilJsPath = 'node_modules/codyhouse-framework/main/assets/js'; // util.js path
 var componentsJsPath = 'main/assets/js/components/*.js'; // component js files
 var scriptsJsPath = 'main/assets/js'; //folder for final scripts.js/scripts.min.js files
 
 // css file paths
-var cssFolder = 'main/assets/css'; // folder for final style.css/style-custom-prop-fallbac.css files
+var cssFolder = 'main/assets/css'; // folder for final style.css file
 var scssFilesPath = 'main/assets/css/**/*.scss'; // scss files to watch
 
 function reload(done) {
@@ -38,10 +37,7 @@ gulp.task('sass', function() {
   }))
   .pipe(rename('style.min.css'))
   .pipe(cleanCSS())
-  .pipe(gulp.dest(cssFolder))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(gulp.dest(cssFolder));
 });
 // This task is used to combine all js files in a single scripts.min.js.
 gulp.task('scripts', function() {
