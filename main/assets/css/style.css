@@ -14423,6 +14423,10 @@ h3 {
   width: auto !important;
 }
 
+.headerIGLogoLink {
+  height: 45px;
+}
+
 .headerIG-logo {
   width: 40px;
 }
@@ -14477,6 +14481,18 @@ footer .footer-v4__print {
   min-width: 44px !important;
   min-height: 44px;
   line-height: 30px;
+}
+
+.contactFromBox {
+  border: 2px solid var(--color-accent-lighter);
+  box-shadow: 0 5px 25px 5px rgba(1, 1, 1, 0.4);
+}
+
+#contactPageFrom .form-label {
+  font-size: 22px;
+}
+#contactPageFrom p {
+  font-size: 14px;
 }
 
 /* -------------------------------- 

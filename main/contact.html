@@ -97,16 +97,16 @@
       <h1>Contact</h1>
       </div>
 
-    <div class="position-relative z-index-1 padding-y-xl">
+    <div class=" position-relative z-index-1 padding-y-xl">
       <div class="container max-width-adaptive-md">
-        <div class="bg inner-glow shadow-xs radius-md overflow-hidden">
+        <div class=" contactFromBox bg inner-glow shadow-xs radius-md overflow-hidden">
           <div class="grid">
             <figure class="height-xxl height-auto@md col-4@md">
               <img class="block height-100% width-100% object-cover" src="./assets/img/IMG_5731.jpg" alt="Image description">
             </figure>
           
             <div class="padding-md col-8@md">
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" method="POST" data-netlify="true" id="contactPageFrom">
                 <fieldset class="margin-bottom-md">
                   <!-- <legend class="form-legend">Contact Me!</legend> -->
   
@@ -142,13 +142,14 @@
               
                   <div class="margin-bottom-xs">
                     <label class="form-label margin-bottom-xxs" for="inputEmail">Email</label>
-                    <input class="form-control width-100%" type="email" name="inputEmail" id="inputEmail" placeholder="email@myemail.com">
+                    <input class="form-control width-100%" type="email" name="inputEmail" id="inputEmail" placeholder="youremail@mmail.com" required>
                   </div>
           
                   <div>
-                    <label class="form-label margin-bottom-xxs" for="textarea">Textarea</label>
-                    <textarea class="form-control width-100%" name="textarea" id="textarea"></textarea>
-                    <p class="text-xs color-contrast-medium margin-top-xxs">Use helper text to provide additional information.</p>
+                    <label class="form-label" for="textarea">Message</label>
+                    <textarea class="form-control width-100%" name="textarea" id="textarea"required></textarea>
+                    <p class="color-contrast-medium margin-y-xxs">Please add as much details about the event or type of shoot you are interested in. Thank You! </p>
+
                   </div>
                 </fieldset>
               

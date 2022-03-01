@@ -231,6 +231,9 @@ box-shadow: 0 5px 25px 5px rgba(1,1,1,.1);
 .f-header__logo{
     width: auto !important;
 }
+.headerIGLogoLink{
+    height: 45px;
+}
 .headerIG-logo{
     width: 40px;
 }
@@ -295,3 +298,21 @@ footer{
     min-height: 44px;
     line-height: 30px;
 }
+
+.contactFromBox{
+    border: 2px solid var(--color-accent-lighter);
+    -webkit-box-shadow: 0 5px 25px 5px rgba(1,1,1,.4);
+    box-shadow: 0 5px 25px 5px rgba(1,1,1,.4);
+}
+#contactPageFrom{
+    .form-label{
+        font-size: 22px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+
+// .f-header__item p{
+//     font-size: 18px;
+// }

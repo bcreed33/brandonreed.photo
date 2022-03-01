@@ -599,10 +599,6 @@ s {
   margin-top: var(--space-xxxxs);
 }
 
-.margin-top-xxs {
-  margin-top: var(--space-xxs);
-}
-
 .margin-top-sm {
   margin-top: var(--space-sm);
 }
@@ -644,6 +640,21 @@ s {
   margin-right: auto;
 }
 
+.margin-y-xxs {
+  margin-top: var(--space-xxs);
+  margin-bottom: var(--space-xxs);
+}
+
+.margin-y-sm {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.margin-y-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .padding-sm {
   padding: var(--space-sm);
 }
@@ -670,6 +681,10 @@ s {
 
 .padding-bottom-xl {
   padding-bottom: var(--space-xl);
+}
+
+.padding-bottom-xxl {
+  padding-bottom: var(--space-xxl);
 }
 
 .padding-bottom-xxxl {
@@ -1488,6 +1503,10 @@ h3 {
   width: auto !important;
 }
 
+.headerIGLogoLink {
+  height: 45px;
+}
+
 .headerIG-logo {
   width: 40px;
 }
@@ -1542,6 +1561,18 @@ footer .footer-v4__print {
   min-width: 44px !important;
   min-height: 44px;
   line-height: 30px;
+}
+
+.contactFromBox {
+  border: 2px solid var(--color-accent-lighter);
+  box-shadow: 0 5px 25px 5px rgba(1, 1, 1, 0.4);
+}
+
+#contactPageFrom .form-label {
+  font-size: 22px;
+}
+#contactPageFrom p {
+  font-size: 14px;
 }
 
 /* -------------------------------- 
