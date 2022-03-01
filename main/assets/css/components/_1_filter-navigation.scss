@@ -135,7 +135,7 @@ Usage: codyhouse.co/license
 .filter-nav--collapsed {
   .filter-nav__wrapper {
     position: fixed;
-    z-index: var(--z-index-overlay, 15); 
+    z-index: var(--z-index-overlay, 900000); 
     top: 0;
     left: 0;
     width: 100%;
@@ -149,6 +149,8 @@ Usage: codyhouse.co/license
     visibility: visible;
     opacity: 1;
     transition: opacity .3s;
+    position: fixed;
+    z-index: var(--z-index-overlay, 900000); 
 
     .filter-nav__nav {
       transform: translateY(0);

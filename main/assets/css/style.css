@@ -14232,7 +14232,8 @@ h3 {
 
 #namePlate {
   background-color: #fff;
-  width: 600px;
+  width: 90%;
+  max-width: 600px;
   height: auto;
   position: absolute;
   top: 17.5%;
@@ -14244,10 +14245,11 @@ h3 {
   padding: 40px 0;
 }
 #namePlate h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 #namePlate h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 #hero-color-layer {
@@ -14435,7 +14437,7 @@ footer .footer-v4__nav-item a {
   font-size: 22px;
 }
 footer .socials__btns p {
-  font-size: 48px;
+  font-size: 1.5rem;
   color: #fff;
 }
 footer .socials__btns img {
@@ -14469,6 +14471,12 @@ footer .footer-v4__print {
 
 #product-gallery {
   min-height: 500px;
+}
+
+.filter-nav--expanded .filter-nav__item {
+  min-width: 44px !important;
+  min-height: 44px;
+  line-height: 30px;
 }
 
 /* -------------------------------- 
@@ -15343,7 +15351,7 @@ Usage: codyhouse.co/license
 /* --collapsed version - available horizontal space not enough to contain all list items */
 .filter-nav--collapsed .filter-nav__wrapper {
   position: fixed;
-  z-index: var(--z-index-overlay, 15);
+  z-index: var(--z-index-overlay, 900000);
   top: 0;
   left: 0;
   width: 100%;
@@ -15356,6 +15364,8 @@ Usage: codyhouse.co/license
   visibility: visible;
   opacity: 1;
   transition: opacity 0.3s;
+  position: fixed;
+  z-index: var(--z-index-overlay, 900000);
 }
 .filter-nav--collapsed .filter-nav__wrapper--is-visible .filter-nav__nav {
   transform: translateY(0);
