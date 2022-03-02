@@ -79,7 +79,7 @@ h3{
 display: flex;
 flex: 1;
 flex-basis: 20%;
-// background-image:url(../img/photos/photo1.jpg);
+// background-image:url(../img/photos/hpphoto1.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
@@ -88,82 +88,88 @@ background-size: cover;
 
 .photo1{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/bball-photo4.jpg);
+background-position: 50% 25%;
+
 }
 
 .photo2{
-    flex-grow: 5;
-background-image:url(../img/photos/photo2.jpg);
+    flex-grow: 6;
+background-image:url(../img/photos/hp/psl-photo21.jpg);
 }
 
 .photo3{
     flex-grow: 5;
-background-image:url(../img/photos/photo3.jpg);
+background-image:url(../img/photos/hp/studio-photo15.jpg);
+background-position: 50% 25%;
 }
 
 .photo4{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/usc-photo17.jpg);
 }
 
 .photo5{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/steeline-photo19.jpg);
 }
 
 .photo6{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/rugby-photo3.jpg);
 }
 
 .photo7{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/bball-photo21.jpg);
 }
 
 .photo8{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/other-photo6.jpg);
 }
 
 .photo9{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/usc-photo33.jpg);
 }
 
 .photo10{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/studio-photo21.jpg);
 }
 
 .photo11{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/steeline-photo15.jpg);
 }
 
 .photo12{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/bball-photo14.jpg);
+background-position: 50% 15%;
 }
 
 .photo13{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/bball-photo10.jpg);
 }
 
 .photo14{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/usc-photo13.jpg);
 }
 
 .photo15{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/rugby-photo11.jpg);
 }
 
 .photo16{
     flex-grow: 5;
-background-image:url(../img/photos/photo1.jpg);
+background-image:url(../img/photos/hp/psl-photo20.jpg);
+background-position: 50% 25%;
+
 }
 
 
@@ -216,6 +222,36 @@ background-image:url(../img/photos/photo1.jpg);
         height: 45px;
         margin: 0   15px;
     }
+}
+.index-gallery{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    // max-height: 625px;
+    overflow: hidden;
+    // @media (min-width: 32rem) {
+    //     max-height: 490px;
+    //     }
+    // @media (min-width: 48rem) {
+    //     max-height: 600px;
+    //     }
+    @media (min-width: 64rem) {
+    max-height: 500px;
+    }
+
+    @media (min-width: 80rem) {
+        max-height: 625px;
+        }
+
+        @media (min-width: 90rem) {
+            max-height: 650px;
+            }
+}
+.gallery-card-color{
+    background-color: rgba(255,255,255,.25);
+    border: 1px #000 solid;
+
+    color: #fff;
 }
 
 .choice-btn-contactFrom{
