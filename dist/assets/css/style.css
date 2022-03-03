@@ -1289,8 +1289,10 @@ h3 {
 }
 
 #hero-wrapper {
-  height: 100vh;
+  width: 100%;
+  height: calc(100vh - 50px);
   background-color: #1c2430;
+  padding: 5px;
 }
 
 #namePlate {
@@ -1299,7 +1301,7 @@ h3 {
   max-width: 600px;
   height: auto;
   position: absolute;
-  top: 40%;
+  top: 22%;
   left: 0;
   right: 0;
   display: inline-block;
@@ -1328,7 +1330,7 @@ h3 {
 #hero-color-layer {
   background-color: rgba(31, 41, 55, 0.5);
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 50px);
   position: absolute;
 }
 
@@ -1341,19 +1343,9 @@ h3 {
 }
 
 .photoRow {
-  height: 25%;
   width: 100%;
   display: flex;
   flex: 1;
-}
-
-.third-photoRow {
-  display: none;
-}
-@media (min-width: 48rem) {
-  .third-photoRow {
-    display: flex;
-  }
 }
 
 .last-photoRow {
@@ -1367,13 +1359,11 @@ h3 {
 
 .photo {
   background-color: black;
-  height: auto;
   width: 25%;
   margin: 5px;
   border-radius: 2.5px;
   display: flex;
   flex: 1;
-  flex-basis: 20%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1410,7 +1400,7 @@ h3 {
 
 .photo4 {
   flex-grow: 1;
-  background-image: url(../img/photos/psl/psl-photo21.jpg);
+  background-image: url(../img/photos/steeline/steeline-photo15.jpg);
   display: none;
 }
 @media (min-width: 64rem) {
@@ -1442,7 +1432,7 @@ h3 {
 
 .photo8 {
   flex-grow: 1;
-  background-image: url(../img/photos/other/other-photo6.jpg);
+  background-image: url(../img/photos/usc/usc-photo33.jpg);
   display: none;
 }
 @media (min-width: 64rem) {
@@ -1453,7 +1443,7 @@ h3 {
 
 .photo9 {
   flex-grow: 1;
-  background-image: url(../img/photos/usc/usc-photo33.jpg);
+  background-image: url(../img/photos/other/other-photo6.jpg);
 }
 
 .photo10 {
@@ -1463,7 +1453,13 @@ h3 {
 
 .photo11 {
   flex-grow: 1;
-  background-image: url(../img/photos/steeline/steeline-photo15.jpg);
+  background-image: url(../img/photos/psl/psl-photo21.jpg);
+  display: none;
+}
+@media (min-width: 48rem) {
+  .photo11 {
+    display: flex;
+  }
 }
 
 .photo12 {
