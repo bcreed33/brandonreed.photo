@@ -101,10 +101,13 @@ h3{
 
 }
 
-#hero-wrapper #photo-wrapper .photoRow .photo{
-    background-position: top;
-background-size:cover;
-}
+// #hero-wrapper #photo-wrapper .photoRow .photo5{
+//     background-position: top;
+// }
+
+// #hero-wrapper #photo-wrapper .photoRow .photo6{
+//     background-position: center;
+// }
 
 // .third-photoRow{
 //     display: none;
@@ -173,7 +176,7 @@ background-position: 50% 25%;
 
 .photo5{
     flex-grow: 1;
-background-image:url(../img/photos/baseball/baseball-photo31.jpg);
+background-image:url(../img/photos/baseball/baseball-photo29.jpg);
 display: none;
 @media (min-width: 48rem) {
     display: flex;
@@ -182,7 +185,7 @@ display: none;
 
 .photo6{
     flex-grow: 1;
-background-image:url(../img/photos/basketball/bball-photo12.jpg);
+background-image:url(../img/photos/basketball/bball-photo42.jpg);
 }
 
 .photo7{
@@ -282,7 +285,7 @@ display: none;
 
 .gallery-wrapper{
     width: 80%;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 .gallery-title{
@@ -473,7 +476,7 @@ footer{
 
 #services-wrapper{
     width: 100%;
-    height: 450px;
+    height: 500px;
     background-color: rgb(28, 36, 48);
     padding: 5px;
     h4{
@@ -490,7 +493,7 @@ footer{
 #services-color-layer{
     background-color: rgba(31, 41, 55, .5);
     width: 100%;
-    height: 450px;
+    height: 500px;
     position: absolute;
     // opacity: .5;
 }
