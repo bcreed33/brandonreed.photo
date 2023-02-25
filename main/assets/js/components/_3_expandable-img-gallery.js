@@ -75,7 +75,7 @@
     gallery.imgMorphImg = gallery.imgMorph.getElementsByTagName('image')[0];
     
     // append image for zoom in effect
-    if(gallery.slideshow.getAttribute('data-zoom') == 'on') {
+    if(gallery.slideshow.getAttribute('data-zoom') == 'off') {
       var zoomImg = document.createElement("div");
       Util.setAttributes(zoomImg, {'aria-hidden': 'true', 'class': 'exp-lightbox__zoom exp-lightbox__zoom--no-transition js-exp-lightbox__zoom'});
       zoomImg.innerHTML = '<img>';
@@ -161,32 +161,32 @@
         modalZoomImg(gallery, false);
       });
 
-      gallery.element.addEventListener('modalIsClose', function(event){
-        modalZoomImg(gallery, false); // close zoom-in image if open
-        closeModalAnimation(gallery);
-      });
+      // gallery.element.addEventListener('modalIsClose', function(event){
+      //   modalZoomImg(gallery, false); // close zoom-in image if open
+      //   closeModalAnimation(gallery);
+      // });
     }
 
     if(!gallery.slideshowObj) return;
 
-    if(gallery.slideshowObj.options.swipe) { // close gallery when you swipeUp/SwipeDown
-      gallery.slideshowObj.element.addEventListener('swipeUp', function(event){
-        closeModal(gallery);
-      });
-      gallery.slideshowObj.element.addEventListener('swipeDown', function(event){
-        closeModal(gallery);
-      });
-    }
+    // if(gallery.slideshowObj.options.swipe) { // close gallery when you swipeUp/SwipeDown
+    //   gallery.slideshowObj.element.addEventListener('swipeUp', function(event){
+    //     closeModal(gallery);
+    //   });
+    //   gallery.slideshowObj.element.addEventListener('swipeDown', function(event){
+    //     closeModal(gallery);
+    //   });
+    // }
     
     if(gallery.zoomImg && gallery.slideshowObj.options.swipe) {
       gallery.slideshowObj.element.addEventListener('swipeLeft', function(event){
-        gallery.modalSwiping = true;
+        gallery.modalSwiping = false;
       });
       gallery.slideshowObj.element.addEventListener('swipeRight', function(event){
-        gallery.modalSwiping = true;
+        gallery.modalSwiping = false;
       });
       gallery.slideshowObj.element.addEventListener('newItemVisible', function(event){
-        gallery.modalSwiping = false;
+        gallery.modalSwiping = true;
       });
     }
   };
@@ -240,7 +240,7 @@
   };
 
   function closeModal(gallery) {
-    gallery.modalSwiping = true;
+    gallery.modalSwiping = false;
     modalZoomImg(gallery, false);
     gallery.element.dispatchEvent(new CustomEvent('closeModal'));
   };

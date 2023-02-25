@@ -14125,6 +14125,7 @@ mark {
   background: var(--color-primary);
   color: var(--color-white);
   box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), var(--shadow-xs);
+  min-height: 45px;
 }
 .btn--primary:hover {
   background: var(--color-primary-light);
@@ -14151,6 +14152,7 @@ mark {
   background: var(--color-accent);
   color: var(--color-white);
   box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), var(--shadow-xs);
+  min-height: 45px;
 }
 .btn--accent:hover {
   background: var(--color-accent-light);
@@ -14349,23 +14351,23 @@ h3 {
 
 .photo4 {
   flex-grow: 1;
-  background-image: url(../img/photos/rugby/rugby-photo4.jpg);
+  background-image: url(../img/photos/football/football-photo12.jpg);
 }
 
 .photo5 {
   flex-grow: 1;
   background-image: url(../img/photos/baseball/baseball-photo29.jpg);
-  display: none;
-}
-@media (min-width: 48rem) {
-  .photo5 {
-    display: flex;
-  }
 }
 
 .photo6 {
   flex-grow: 1;
-  background-image: url(../img/photos/basketball/bball-photo42.jpg);
+  background-image: url(../img/photos/steeline/steeline-photo19.jpg);
+  display: none;
+}
+@media (min-width: 48rem) {
+  .photo6 {
+    display: flex;
+  }
 }
 
 .photo7 {
@@ -14375,7 +14377,7 @@ h3 {
 
 .photo8 {
   flex-grow: 1;
-  background-image: url(../img/photos/usc/usc-photo33.jpg);
+  background-image: url(../img/photos/football/football-photo33.jpg);
   display: none;
 }
 @media (min-width: 48rem) {
@@ -14418,7 +14420,7 @@ h3 {
 
 .photo14 {
   flex-grow: 1;
-  background-image: url(../img/photos/usc/usc-photo17.jpg);
+  background-image: url(../img/photos/football/football-photo17.jpg);
   display: none;
 }
 @media (min-width: 48rem) {
@@ -14446,7 +14448,7 @@ h3 {
 
 .photo17 {
   flex-grow: 1;
-  background-image: url(../img/photos/usc/usc-photo36.jpg);
+  background-image: url(../img/photos/football/football-photo36.jpg);
   background-position: 50% 25%;
   display: none;
 }
@@ -14653,6 +14655,15 @@ footer .footer-v4__print {
 
 .otherServicesLink {
   color: white;
+}
+
+.serviceFlewDirectionMobile {
+  flex-direction: column-reverse;
+}
+@media (min-width: 64rem) {
+  .serviceFlewDirectionMobile {
+    flex-direction: row;
+  }
 }
 
 /* -------------------------------- 

@@ -170,22 +170,23 @@ background-position: 50% 25%;
 
 .photo4{
     flex-grow: 1;
-    background-image:url(../img/photos/rugby/rugby-photo4.jpg);}
+    background-image:url(../img/photos/football/football-photo12.jpg);}
 
 
 
 .photo5{
     flex-grow: 1;
 background-image:url(../img/photos/baseball/baseball-photo29.jpg);
-display: none;
-@media (min-width: 48rem) {
-    display: flex;
-}
+
 }
 
 .photo6{
     flex-grow: 1;
-background-image:url(../img/photos/basketball/bball-photo42.jpg);
+background-image:url(../img/photos/steeline/steeline-photo19.jpg);
+display: none;
+@media (min-width: 48rem) {
+    display: flex;
+}
 }
 
 .photo7{
@@ -196,7 +197,7 @@ background-image:url(../img/photos/basketball/bball-photo21.jpg);
 
 .photo8{
     flex-grow: 1;
-background-image:url(../img/photos/usc/usc-photo33.jpg);
+background-image:url(../img/photos/football/football-photo33.jpg);
 
 display: none;
 @media (min-width: 48rem) {
@@ -241,7 +242,7 @@ background-image:url(../img/photos/basketball/bball-photo10.jpg);
 
 .photo14{
     flex-grow: 1;
-background-image:url(../img/photos/usc/usc-photo17.jpg);
+background-image:url(../img/photos/football/football-photo17.jpg);
 
 display: none;
 @media (min-width: 48rem) {
@@ -270,7 +271,7 @@ display: none;
 
 .photo17{
     flex-grow:1;
-background-image:url(../img/photos/usc/usc-photo36.jpg);
+background-image:url(../img/photos/football/football-photo36.jpg);
 background-position: 50% 25%;
 display: none;
 @media (min-width: 48rem) {
@@ -506,4 +507,15 @@ footer{
 
 .otherServicesLink{
     color:white
+}
+
+
+
+.serviceFlewDirectionMobile{
+    flex-direction: column-reverse;
+    @media (min-width: 64rem) {
+        flex-direction: row;
+
+
+    }
 }
