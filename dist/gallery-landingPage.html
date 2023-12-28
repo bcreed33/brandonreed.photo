@@ -93,7 +93,7 @@
               <li><a href="./gallery-baseball.html" class="f-header__dropdown-link">Baseball</a></li>
               <li><a href="./gallery-basketball.html" class="f-header__dropdown-link">Basketball</a></li>
               <li><a href="./gallery-football.html" class="f-header__dropdown-link">Football</a></li>
-              <li><a href="./gallery-steeline.html" class="f-header__dropdown-link">Steeline</a></li>
+              <!--<li><a href="./gallery-steeline.html" class="f-header__dropdown-link">Steeline</a></li> -->
               <li><a href="./gallery-portraits.html" class="f-header__dropdown-link">Portraits</a></li>
             </ul>
           </li>
@@ -117,21 +117,19 @@
     </div>
   </header>
 
-  <div class="pagetitle padding-bottom-lg text-center margin-top-xl">
-    <h1>Galleries</h1>
-    </div>
-  <!-- <div class="innerpage-wrapper padding-y-xl">
+
+  <div class="innerpage-wrapper padding-y-xl">
     <div class="pagetitle padding-bottom-lg text-center">
 <h1>Galleries</h1>
-</div> -->
-<div class="container max-width-adaptive-lg margin-bottom-xxl">
-  <!-- <div class="masonry js-masonry">
-    <div class="masonry__loader" aria-hidden="true">
-      <svg class="icon icon--lg icon--is-spinning" viewBox="0 0 32 32"><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor" fill="none"><circle cx="16" cy="16" r="15" opacity="0.4"></circle><path d="M16,1A15,15,0,0,1,31,16" stroke-linecap="butt"></path></g></svg>
-    </div> -->
-  
-    <ul class="exp-gallery grid gap-xs js-exp-gallery">
-      <li class="col-12 col-6@sm col-4@lg ">
+</div>
+  <div class="container max-width-adaptive-lg">
+    <div class="articles-v4 masonry js-masonry">
+      <div class="masonry__loader" aria-hidden="false">
+        <svg class="icon icon--md icon--is-spinning" viewBox="0 0 32 32"><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor" fill="none"><circle cx="16" cy="16" r="15" opacity="0.4"></circle><path d="M16,1A15,15,0,0,1,31,16" stroke-linecap="butt"></path></g></svg>
+      </div>
+    
+      <ul class="masonry__list js-masonry__list">
+        <li class="masonry__item js-masonry__item">
           <h1 id="card-title-4" class="text-xl">Athletes Portraits</h1>
 
           <a href="./gallery-athlete.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-4" style="background-image: url('./assets/img/photos/athlete/athlete-photo12.jpg');">
@@ -147,7 +145,7 @@
         </li>
 
 
-        <li class="col-12 col-6@sm col-4@lg">
+        <li class="masonry__item js-masonry__item">
           <h1 id="card-title-4" class="text-xl">Portraits</h1>
 
           <a href="./gallery-portraits.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-4" style="background-image: url('./assets/img/photos/portraits/portraits-photo1.jpg');">
@@ -163,7 +161,7 @@
         </li>
 
 
-        <li class="col-12 col-6@sm col-4@lg">
+        <li class="masonry__item js-masonry__item">
           <h1 id="card-title-4" class="text-xl">Team Sessions</h1>
 
           <a href="./gallery-team.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-4" style="background-image: url('./assets/img/photos/team/team-photo1.jpg');">
@@ -177,24 +175,7 @@
             </div>
           </a>
         </li>
-
-
-        <li class="col-12 col-6@sm col-4@lg">
-          <h1 id="card-title-5" class="text-xl">Rugby</h1>
-
-          <a href="./gallery-rugby.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-5" style="background-image: url('./assets/img/photos/rugby/rugby-photo5.jpg');">
-            <div class="card-v9__content padding-md gallery-card-color">
-              <div class="padding-bottom-xxxl max-width-xxs">
-              </div>
-      
-              <div class="margin-top-auto">
-                <span class="card-v9__btn"><i>View More</i></span>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="col-12 col-6@sm col-4@lg">
+        <li class="masonry__item js-masonry__item">
           <h1 id="card-title-2" class="text-xl">Football</h1>
 
           <a href="./gallery-football.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-2" style="background-image: url('./assets/img/photos/football/football-photo1.jpg');">
@@ -208,7 +189,7 @@
             </div>
           </a>
         </li>
-        <li class="col-12 col-6@sm col-4@lg">
+        <li class="masonry__item js-masonry__item">
           <h1 id="card-title-1" class="text-xl">Baseball</h1>
           <a href="./gallery-baseball.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-1" style="background-image: url('./assets/img/photos/baseball/baseball-photo22.jpg');">
             <div class="card-v9__content padding-md gallery-card-color">
@@ -223,7 +204,7 @@
         </li>
 
 
-        <li class="col-12 col-6@sm col-4@lg">
+        <li class="masonry__item js-masonry__item">
           <h1 id="card-title-1" class="text-xl">Basketball</h1>
 
           <a href="./gallery-basketball.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-1" style="background-image: url('./assets/img/photos/basketball/bball-photo4.jpg');">
@@ -238,10 +219,23 @@
           </a>
         </li>
     
+        <li class="masonry__item js-masonry__item">
+          <h1 id="card-title-5" class="text-xl">Rugby</h1>
 
+          <a href="./gallery-rugby.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-5" style="background-image: url('./assets/img/photos/rugby/rugby-photo5.jpg');">
+            <div class="card-v9__content padding-md gallery-card-color">
+              <div class="padding-bottom-xxxl max-width-xxs">
+              </div>
+      
+              <div class="margin-top-auto">
+                <span class="card-v9__btn"><i>View More</i></span>
+              </div>
+            </div>
+          </a>
+        </li>
 
-        <li class="col-12 col-6@sm col-4@lg">
-          <h1 id="card-title-6" class="text-xl">Pittsburgh Steeeline</h1>
+        <!-- <li class="masonry__item js-masonry__item">
+          <h1 id="card-title-6" class="text-xl">Pittsburgh Steeline</h1>
 
           <a href="./gallery-steeline.html" class="card-v9 radius-md" data-theme="default" aria-labelledby="card-title-6" style="background-image: url('./assets/img/photos/steeline/steeline-photo6.jpg');">
             <div class="card-v9__content padding-md gallery-card-color">
@@ -254,10 +248,12 @@
             </div>
           </a>
         </li>
+     -->
+
       </ul>
     </div>
   </div>
-
+</div>
 
 
 
