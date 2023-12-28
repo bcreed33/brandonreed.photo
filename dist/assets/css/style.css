@@ -39,6 +39,7 @@
     .grid > *, .flex[class*=gap-] > * {
       margin-bottom: var(--sub-gap-y);
     }
+
     .grid {
       --offset: var(--gap-x);
       --gap-modifier: 0;
@@ -47,6 +48,7 @@
     .grid > * {
       margin-left: var(--offset);
     }
+
     .flex[class*=gap-] > * {
       margin-left: var(--sub-gap-x);
     }
@@ -128,54 +130,69 @@
 }
 
 @media (min-width: 32rem) {
+
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
 @media (min-width: 48rem) {
+
   .col-4\@sm {
     --span: 4;
   }
+
   .col-6\@sm {
     --span: 6;
   }
+
    .col-4\@sm, .col-6\@sm {
     flex-basis: calc((100% - (var(--grid-columns) - var(--gap-modifier, 1)) * var(--sub-gap-x)) * var(--span) / var(--grid-columns) + (var(--span) - 1) * var(--sub-gap-x));
     max-width: calc((100% - (var(--grid-columns) - var(--gap-modifier, 1)) * var(--sub-gap-x)) * var(--span) / var(--grid-columns) + (var(--span) - 1) * var(--sub-gap-x));
   }
+
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
 @media (min-width: 64rem) {
+
   .col-3\@md {
     --span: 3;
   }
+
   .col-4\@md {
     --span: 4;
   }
+
   .col-5\@md {
     --span: 5;
   }
+
   .col-6\@md {
     --span: 6;
   }
+
   .col-7\@md {
     --span: 7;
   }
+
   .col-8\@md {
     --span: 8;
   }
+
    .col-3\@md, .col-4\@md, .col-5\@md, .col-6\@md, .col-7\@md, .col-8\@md {
     flex-basis: calc((100% - (var(--grid-columns) - var(--gap-modifier, 1)) * var(--sub-gap-x)) * var(--span) / var(--grid-columns) + (var(--span) - 1) * var(--sub-gap-x));
     max-width: calc((100% - (var(--grid-columns) - var(--gap-modifier, 1)) * var(--sub-gap-x)) * var(--span) / var(--grid-columns) + (var(--span) - 1) * var(--sub-gap-x));
   }
+
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
 @media (min-width: 80rem) {
+
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
 @media (min-width: 90rem) {
+
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
@@ -257,8 +274,8 @@ img, video, svg {
 }
 
 [data-theme] {
-  background-color: var(--color-bg, hsl(0, 0%, 100%));
-  color: var(--color-contrast-high, hsl(210, 7%, 21%));
+  background-color: var(--color-bg, white);
+  color: var(--color-contrast-high, #323639);
 }
 
 :root {
@@ -315,12 +332,12 @@ img, video, svg {
 body {
   font-size: var(--text-base-size, 1rem);
   font-family: var(--font-primary, sans-serif);
-  color: var(--color-contrast-high, hsl(210, 7%, 21%));
+  color: var(--color-contrast-high, #323639);
   font-weight: var(--body-font-weight, normal);
 }
 
 h1, h2, h3, h4 {
-  color: var(--color-contrast-higher, hsl(204, 28%, 7%));
+  color: var(--color-contrast-higher, #0d1317);
   line-height: var(--heading-line-height, 1.2);
   font-weight: var(--heading-font-weight, 700);
 }
@@ -346,7 +363,7 @@ small {
 }
 
 a, .link {
-  color: var(--color-primary, hsl(250, 84%, 54%));
+  color: var(--color-primary, #4827ec);
   text-decoration: underline;
 }
 
@@ -445,7 +462,17 @@ s {
 }
 
 .icon--is-spinning {
-  animation: icon-spin 1s infinite linear;
+  -webkit-animation: icon-spin 1s infinite linear;
+          animation: icon-spin 1s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes icon-spin {
@@ -486,7 +513,7 @@ s {
 }
 
 .form-legend {
-  color: var(--color-contrast-higher, hsl(204, 28%, 7%));
+  color: var(--color-contrast-higher, #0d1317);
   line-height: var(--heading-line-height, 1.2);
   font-size: var(--text-md, 1.125rem);
   margin-bottom: var(--space-sm);
@@ -982,23 +1009,29 @@ s {
   visibility: visible;
 }
 @media (min-width: 48rem) {
+
   .width-70\%\@sm {
     width: 70%;
   }
 }
 @media (min-width: 64rem) {
+
   .justify-end\@md {
     justify-content: flex-end;
   }
+
   .items-center\@md {
     align-items: center;
   }
+
   .padding-top-0\@md {
     padding-top: 0;
   }
+
   .width-70\%\@md {
     width: 70%;
   }
+
   .height-auto\@md {
     height: auto;
   }
@@ -1314,6 +1347,10 @@ h1, h2, h3, h4 {
   opacity: 1;
   color: var(--color-contrast-low);
 }
+.form-control:-ms-input-placeholder {
+  opacity: 1;
+  color: var(--color-contrast-low);
+}
 .form-control::placeholder {
   opacity: 1;
   color: var(--color-contrast-low);
@@ -1335,7 +1372,7 @@ h3 {
 #hero-wrapper {
   width: 100%;
   height: calc(100vh - 50px);
-  background-color: rgb(28, 36, 48);
+  background-color: #1c2430;
   padding: 5px;
 }
 
@@ -1461,7 +1498,7 @@ h3 {
 
 .photo5 {
   flex-grow: 1;
-  background-image: url(../img/photos/baseball/baseball-photo1.jpg);
+  background-image: url(../img/photos/baseball/baseball-photo29.jpg);
 }
 
 .photo6 {
@@ -1742,7 +1779,7 @@ footer .footer-v4__print {
 #services-wrapper {
   width: 100%;
   height: 500px;
-  background-color: rgb(28, 36, 48);
+  background-color: #1c2430;
   padding: 5px;
 }
 #services-wrapper h4 {
@@ -2049,6 +2086,7 @@ Usage: codyhouse.co/license
   box-shadow: 0 0 0 var(--choice-btn-border-width) var(--color-contrast-lower);
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: 0.2s;
@@ -2127,13 +2165,19 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 :root {
-  --date-picker-trigger-width: 2.5em; /* calendar button width */
-  --date-picker-icon-size: 1em; /* calendar icon size */
+  --date-picker-trigger-width: 2.5em;
+  /* calendar button width */
+  --date-picker-icon-size: 1em;
+  /* calendar icon size */
   /* calendar */
-  --date-picker-calendar-gap: 4px; /* distance between input and calendar */
-  --date-picker-calendar-padding: var(--space-xxs); /* calendar padding */
-  --date-picker-calendar-item-size: 2em; /* calendar date size */
-  --date-picker-calendar-item-radius: var(--radius-md); /* calendar date border radius */
+  --date-picker-calendar-gap: 4px;
+  /* distance between input and calendar */
+  --date-picker-calendar-padding: var(--space-xxs);
+  /* calendar padding */
+  --date-picker-calendar-item-size: 2em;
+  /* calendar date size */
+  --date-picker-calendar-item-radius: var(--radius-md);
+  /* calendar date border radius */
 }
 
 @media (min-width: 48rem) {
@@ -2153,7 +2197,8 @@ Usage: codyhouse.co/license
   right: 0;
   height: 100%;
   width: var(--date-picker-trigger-width);
-  display: none; /* hide button if JS is not enabled */
+  display: none;
+  /* hide button if JS is not enabled */
   transition: 0.2s;
 }
 .date-input__trigger .icon {
@@ -2169,7 +2214,9 @@ Usage: codyhouse.co/license
   transform: translateY(2px);
 }
 
-.js { /* show calendar button if JS is enabled */ }
+.js {
+  /* show calendar button if JS is enabled */
+}
 .js .date-input__trigger {
   display: flex;
 }
@@ -2177,7 +2224,8 @@ Usage: codyhouse.co/license
   padding-right: calc(var(--date-picker-trigger-width) + var(--space-xxxs));
 }
 
-.date-input--hide-calendar .date-input__trigger { /* hide calendar trigger when flexbox is not supported */
+.date-input--hide-calendar .date-input__trigger {
+  /* hide calendar trigger when flexbox is not supported */
   display: none;
 }
 
@@ -2193,6 +2241,7 @@ Usage: codyhouse.co/license
   z-index: var(--z-index-popover, 5);
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   overflow: hidden;
   /* use rem units */
@@ -2211,11 +2260,13 @@ Usage: codyhouse.co/license
 }
 
 /* month navigation */
-.date-picker__month { /* wrapper */
+.date-picker__month {
+  /* wrapper */
   position: relative;
 }
 
-.date-picker__month-label { /* month name */
+.date-picker__month-label {
+  /* month name */
   position: absolute;
   top: 0;
   left: 0;
@@ -2251,7 +2302,8 @@ Usage: codyhouse.co/license
   width: 100%;
   height: 100%;
   border-radius: var(--date-picker-calendar-item-radius);
-  color: var(--color-contrast-low); /* icon color */
+  color: var(--color-contrast-low);
+  /* icon color */
   transition: transform 0.2s;
 }
 .date-picker__month-nav-btn .icon {
@@ -2347,7 +2399,8 @@ Usage: codyhouse.co/license
   color: var(--color-primary);
 }
 
-.date-picker__date::-moz-focus-inner { /* remove Firefox dotted-outline focus effect */
+.date-picker__date::-moz-focus-inner {
+  /* remove Firefox dotted-outline focus effect */
   border: none;
 }
 
@@ -2380,15 +2433,18 @@ Usage: codyhouse.co/license
     -webkit-clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
             clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
   }
+
   .diagonal-section--flip-x {
     -webkit-clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
             clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
   }
+
   .diagonal-section-top {
     padding-top: calc(var(--diagonal-section-offset) / 2);
     -webkit-clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% 100%);
   }
+
   .diagonal-section-top--flip-x {
     -webkit-clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% 100%);
@@ -2397,11 +2453,13 @@ Usage: codyhouse.co/license
     -webkit-clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
             clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
   }
+
   .diagonal-section-bottom {
     padding-bottom: calc(var(--diagonal-section-offset) / 2);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
   }
+
   .diagonal-section-bottom--flip-x {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
@@ -2410,6 +2468,7 @@ Usage: codyhouse.co/license
     -webkit-clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
             clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
   }
+
   .diagonal-section-top--flip-x.diagonal-section-bottom--flip-x {
     -webkit-clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
             clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
@@ -2537,10 +2596,12 @@ Usage: codyhouse.co/license
   position: relative;
   z-index: 1;
 }
-.filter-nav--expanded .filter-nav__btn { /* <button> element inside each list item */
+.filter-nav--expanded .filter-nav__btn {
+  /* <button> element inside each list item */
   cursor: pointer;
 }
-.filter-nav--expanded .filter-nav__marker { /* animated marker */
+.filter-nav--expanded .filter-nav__marker {
+  /* animated marker */
   position: absolute;
   width: 0;
   pointer-events: none;
@@ -2563,7 +2624,8 @@ Usage: codyhouse.co/license
 .filter-nav--expanded.filter-nav--v1 .filter-nav__btn[aria-current=true] {
   color: var(--color-primary);
 }
-.filter-nav--expanded.filter-nav--v1 .filter-nav__marker { /* animated marker */
+.filter-nav--expanded.filter-nav--v1 .filter-nav__marker {
+  /* animated marker */
   top: 0;
   left: 0;
   height: 100%;
@@ -2587,7 +2649,8 @@ Usage: codyhouse.co/license
 .filter-nav--expanded.filter-nav--v2 .filter-nav__btn[aria-current=true] {
   color: var(--color-primary);
 }
-.filter-nav--expanded.filter-nav--v2 .filter-nav__marker { /* animated marker */
+.filter-nav--expanded.filter-nav--v2 .filter-nav__marker {
+  /* animated marker */
   top: var(--space-xxxs);
   left: 0;
   height: calc(100% - var(--space-xxxs) * 2);
@@ -2606,7 +2669,8 @@ Usage: codyhouse.co/license
 .filter-nav--expanded.filter-nav--v3 .filter-nav__btn[aria-current=true] {
   color: var(--color-primary);
 }
-.filter-nav--expanded.filter-nav--v3 .filter-nav__marker { /* animated marker */
+.filter-nav--expanded.filter-nav--v3 .filter-nav__marker {
+  /* animated marker */
   bottom: 0;
   left: 0;
   height: 1px;
@@ -2651,19 +2715,22 @@ Usage: codyhouse.co/license
   overflow: auto;
   padding: 0 0 var(--space-md);
 }
-.filter-nav--collapsed .filter-nav__list::before { /* top shadow - visible if menu height triggers vertical scrolling */
+.filter-nav--collapsed .filter-nav__list::before {
+  /* top shadow - visible if menu height triggers vertical scrolling */
   content: "";
   display: block;
   width: 100%;
   height: 10px;
   background: linear-gradient(hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 1), hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0));
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 1;
 }
 .filter-nav--collapsed .filter-nav__btn {
-  display: block; /* fallback */
+  display: block;
+  /* fallback */
   display: flex;
   align-items: center;
   width: 100%;
@@ -2679,7 +2746,8 @@ Usage: codyhouse.co/license
 .filter-nav--collapsed .filter-nav__btn[aria-current=true] {
   color: var(--color-primary);
 }
-.filter-nav--collapsed .filter-nav__btn::before { /* check icon next to the selected button */
+.filter-nav--collapsed .filter-nav__btn::before {
+  /* check icon next to the selected button */
   content: "";
   display: block;
   height: 16px;
@@ -2688,14 +2756,17 @@ Usage: codyhouse.co/license
   background-color: transparent;
 }
 .filter-nav--collapsed .filter-nav__btn[aria-current=true]::before {
-  background-color: var(--color-primary); /* icon color */
+  background-color: var(--color-primary);
+  /* icon color */
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolyline stroke-width='2' stroke='%23000000' fill='none' stroke-linecap='round' stroke-linejoin='round' points='1,9 5,13 15,3 '/%3E%3C/svg%3E");
           mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolyline stroke-width='2' stroke='%23000000' fill='none' stroke-linecap='round' stroke-linejoin='round' points='1,9 5,13 15,3 '/%3E%3C/svg%3E");
 }
-.filter-nav--collapsed .filter-nav__marker { /* hide animated marker */
+.filter-nav--collapsed .filter-nav__marker {
+  /* hide animated marker */
   display: none !important;
 }
-.filter-nav--collapsed .filter-nav__close-btn { /* X button */
+.filter-nav--collapsed .filter-nav__close-btn {
+  /* X button */
   --size: 32px;
   width: var(--size);
   height: var(--size);
@@ -2745,7 +2816,8 @@ Usage: codyhouse.co/license
 :root {
   --search-input-btn-width: 2.2em;
   --search-input-icon-size: 1em;
-  --search-input-shortcut-margin: 0.325em; /* gap between the shortcut badge and the input edges */
+  --search-input-shortcut-margin: 0.325em;
+  /* gap between the shortcut badge and the input edges */
 }
 
 .search-input {
@@ -2798,7 +2870,8 @@ Usage: codyhouse.co/license
   --size: var(--search-input-icon-size);
   margin-left: auto;
   margin-right: auto;
-  color: var(--color-contrast-low); /* icon color */
+  color: var(--color-contrast-low);
+  /* icon color */
   transition: 0.2s;
 }
 .search-input--icon-left .search-input__btn {
@@ -2809,7 +2882,8 @@ Usage: codyhouse.co/license
 
 .search-input__btn:focus .icon,
 .search-input .search-input__input:focus + .search-input__btn .icon {
-  color: var(--color-primary); /* active icon color */
+  color: var(--color-primary);
+  /* active icon color */
 }
 
 /* --shortcut */
@@ -2856,7 +2930,8 @@ Usage: codyhouse.co/license
   width: 100%;
   z-index: var(--z-index-header, 3);
 }
-.f-header::before { /* used in JS to detect menu style */
+.f-header::before {
+  /* used in JS to detect menu style */
   display: none;
   content: "mobile";
 }
@@ -2865,7 +2940,8 @@ Usage: codyhouse.co/license
   /* class added when navigation is visible - small devices only */
 }
 
-.f-header__mobile-content { /* logo + menu button on small devices */
+.f-header__mobile-content {
+  /* logo + menu button on small devices */
   position: relative;
   display: flex;
   height: 100%;
@@ -2884,7 +2960,8 @@ Usage: codyhouse.co/license
   display: block;
 }
 
-.f-header__nav-control { /* menu button */
+.f-header__nav-control {
+  /* menu button */
   --anim-menu-btn-size: 40px;
   /* 🍔 icon */
   --anim-menu-btn-icon-size: 28px;
@@ -2899,7 +2976,8 @@ Usage: codyhouse.co/license
   max-height: calc(100vh - var(--f-header-offset, 0px));
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
   padding: 0 0 var(--space-md);
   background-color: var(--color-bg);
   box-shadow: var(--shadow-md);
@@ -2908,9 +2986,11 @@ Usage: codyhouse.co/license
   opacity: 0;
   transform: translateY(-1em);
 }
-.f-header__nav::before { /* top header bg + border */
+.f-header__nav::before {
+  /* top header bg + border */
   content: "";
   display: block;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: var(--f-header-height);
@@ -2926,7 +3006,8 @@ Usage: codyhouse.co/license
 }
 
 .f-header__nav-logo-wrapper {
-  display: none; /* hide logo nav on small devices */
+  display: none;
+  /* hide logo nav on small devices */
 }
 
 .f-header__item {
@@ -2938,7 +3019,8 @@ Usage: codyhouse.co/license
   --size: 16px;
   flex-shrink: 0;
   margin: 0 10px 0 auto;
-  display: none; /* hide on mobile if link */
+  display: none;
+  /* hide on mobile if link */
 }
 .f-header__dropdown-control .f-header__dropdown-icon {
   display: block;
@@ -2979,8 +3061,10 @@ Usage: codyhouse.co/license
   width: 100%;
 }
 
-.f-header__dropdown { /* sub navigation */
-  padding-left: var(--space-md); /* offset sub nav */
+.f-header__dropdown {
+  /* sub navigation */
+  padding-left: var(--space-md);
+  /* offset sub nav */
 }
 
 .f-header__dropdown-control + .f-header__dropdown {
@@ -2994,9 +3078,12 @@ Usage: codyhouse.co/license
   .f-header::before {
     content: "desktop";
   }
+
   .f-header__mobile-content {
-    display: none; /* hide logo + menu (mobile content) */
+    display: none;
+    /* hide logo + menu (mobile content) */
   }
+
   .f-header__nav {
     /* reset */
     position: static;
@@ -3009,53 +3096,68 @@ Usage: codyhouse.co/license
     transition: none;
     max-height: none;
     overflow: visible;
-    overscroll-behavior: auto;
+    -ms-scroll-chaining: chained;
+        overscroll-behavior: auto;
     height: var(--f-header-height);
   }
-  .f-header__nav::before { /* reset */
+  .f-header__nav::before {
+    /* reset */
     display: none;
   }
+
   .f-header__nav-logo-wrapper {
     display: flex;
   }
+
   .f-header__nav-grid,
-  .f-header__list {
+.f-header__list {
     display: flex;
     align-items: center;
   }
+
   .f-header__nav-grid {
     height: 100%;
   }
+
   .f-header__item {
     position: relative;
     border-bottom: none;
-    margin-right: var(--space-xs); /* margin between nav items */
+    margin-right: var(--space-xs);
+    /* margin between nav items */
   }
   .f-header__item:last-child {
     margin-right: 0;
   }
+
   .f-header__dropdown-icon {
     --size: 12px;
     display: block;
     margin: 0 0 0 var(--space-xxxxs);
   }
+
   .f-header__link,
-  .f-header__dropdown-control,
-  .f-header__dropdown-link,
-  .f-header__btn,
-  .f-header__form-control {
+.f-header__dropdown-control,
+.f-header__dropdown-link,
+.f-header__btn,
+.f-header__form-control {
     font-size: 1.125rem;
   }
+
   .f-header__link {
     padding: var(--space-xxxs) var(--space-xxs);
   }
+
   .f-header__link--icon span {
-    display: none; /* hide icon label */
+    display: none;
+    /* hide icon label */
   }
+
   .f-header__btn,
-  .f-header__form-control {
-    margin: 0; /* reset */
+.f-header__form-control {
+    margin: 0;
+    /* reset */
   }
+
   .f-header__dropdown {
     position: absolute;
     top: 100%;
@@ -3072,13 +3174,15 @@ Usage: codyhouse.co/license
     transition: visibility 0.2s 0.2s, opacity 0.2s 0s;
   }
   .f-header__dropdown-control + .f-header__dropdown {
-    display: block; /* reset style */
+    display: block;
+    /* reset style */
   }
   .f-header__item:hover .f-header__dropdown, .f-header__dropdown-control[aria-expanded=true] + .f-header__dropdown {
     visibility: visible;
     opacity: 1;
     transition: visibility 0.2s 0s, opacity 0.2s 0s;
   }
+
   .f-header__dropdown-link {
     color: var(--color-contrast-high);
     padding: var(--space-xs) var(--space-sm);
@@ -3271,6 +3375,7 @@ Usage: codyhouse.co/license
 -------------------------------- */
 .hide-nav {
   --hide-nav-transition-duration: 0.3s;
+  position: -webkit-sticky !important;
   position: sticky !important;
   top: 0;
   will-change: transform;
@@ -3488,12 +3593,14 @@ Usage: codyhouse.co/license
   .footer-v4 {
     text-align: center;
   }
+
   .footer-v4__nav-list {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .footer-v4__nav-item {
     display: inline-block;
     margin: var(--space-xxxs) var(--space-xs);
@@ -3507,12 +3614,15 @@ Usage: codyhouse.co/license
   .footer-v4__nav-item:last-child {
     padding-right: 0;
   }
+
   .footer-v4__logo {
     display: inline-block;
   }
+
   .footer-v4__print {
     font-size: var(--text-xs);
   }
+
   .footer-v4__socials {
     justify-content: center;
   }
@@ -3593,13 +3703,16 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 .menu {
-  --menu-vertical-gap: 4px; /* vertical gap between the Menu element and its control */
+  --menu-vertical-gap: 4px;
+  /* vertical gap between the Menu element and its control */
   --menu-item-padding: var(--space-xxxs) var(--space-xs);
   list-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
-  position: fixed; /* top/left position set in JS */
+  position: fixed;
+  /* top/left position set in JS */
   z-index: var(--z-index-popover, 5);
   width: 220px;
   background-color: var(--color-bg-light);
@@ -3632,7 +3745,8 @@ Usage: codyhouse.co/license
   display: flex;
   align-items: center;
   padding: var(--menu-item-padding);
-  text-decoration: none; /* reset link style */
+  text-decoration: none;
+  /* reset link style */
   color: var(--color-contrast-high);
   cursor: pointer;
   white-space: nowrap;
@@ -3705,7 +3819,8 @@ Usage: codyhouse.co/license
   margin: auto;
 }
 
-.modal__close-btn--outer { /* close button - outside the modal__content */
+.modal__close-btn--outer {
+  /* close button - outside the modal__content */
   --size: 48px;
   width: var(--size);
   height: var(--size);
@@ -3717,7 +3832,8 @@ Usage: codyhouse.co/license
   transition: 0.2s;
 }
 .modal__close-btn--outer .icon {
-  color: var(--color-white); /* icon color */
+  color: var(--color-white);
+  /* icon color */
   transition: transform 0.3s var(--ease-out-back);
 }
 .modal__close-btn--outer:hover {
@@ -3727,7 +3843,8 @@ Usage: codyhouse.co/license
   transform: scale(1.1);
 }
 
-.modal__close-btn--inner { /* close button - inside the modal__content */
+.modal__close-btn--inner {
+  /* close button - inside the modal__content */
   --size: 32px;
   width: var(--size);
   height: var(--size);
@@ -3736,7 +3853,8 @@ Usage: codyhouse.co/license
   transition: 0.2s;
 }
 .modal__close-btn--inner .icon {
-  color: inherit; /* icon color */
+  color: inherit;
+  /* icon color */
 }
 .modal__close-btn--inner:hover {
   background-color: var(--color-bg-lighter);
@@ -3745,7 +3863,8 @@ Usage: codyhouse.co/license
 
 /* animations */
 :root {
-  --modal-transition-duration: 0.2s; /* fallback (i.e., unless specified differently in the variations 👇) */
+  --modal-transition-duration: 0.2s;
+  /* fallback (i.e., unless specified differently in the variations 👇) */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -3756,89 +3875,102 @@ Usage: codyhouse.co/license
   .modal--animate-fade.modal--is-visible {
     transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s;
   }
+
   .modal--animate-scale,
-  .modal--animate-translate-up,
-  .modal--animate-translate-down,
-  .modal--animate-translate-right,
-  .modal--animate-translate-left {
+.modal--animate-translate-up,
+.modal--animate-translate-down,
+.modal--animate-translate-right,
+.modal--animate-translate-left {
     --modal-transition-duration: 0.2s;
     transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
   }
   .modal--animate-scale .modal__content,
-  .modal--animate-translate-up .modal__content,
-  .modal--animate-translate-down .modal__content,
-  .modal--animate-translate-right .modal__content,
-  .modal--animate-translate-left .modal__content {
+.modal--animate-translate-up .modal__content,
+.modal--animate-translate-down .modal__content,
+.modal--animate-translate-right .modal__content,
+.modal--animate-translate-left .modal__content {
     will-change: transform;
     transition: transform var(--modal-transition-duration) var(--ease-out);
   }
   .modal--animate-scale.modal--is-visible,
-  .modal--animate-translate-up.modal--is-visible,
-  .modal--animate-translate-down.modal--is-visible,
-  .modal--animate-translate-right.modal--is-visible,
-  .modal--animate-translate-left.modal--is-visible {
+.modal--animate-translate-up.modal--is-visible,
+.modal--animate-translate-down.modal--is-visible,
+.modal--animate-translate-right.modal--is-visible,
+.modal--animate-translate-left.modal--is-visible {
     transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s;
   }
   .modal--animate-scale.modal--is-visible .modal__content,
-  .modal--animate-translate-up.modal--is-visible .modal__content,
-  .modal--animate-translate-down.modal--is-visible .modal__content,
-  .modal--animate-translate-right.modal--is-visible .modal__content,
-  .modal--animate-translate-left.modal--is-visible .modal__content {
-    transform: scale(1); /* reset all transformations */
+.modal--animate-translate-up.modal--is-visible .modal__content,
+.modal--animate-translate-down.modal--is-visible .modal__content,
+.modal--animate-translate-right.modal--is-visible .modal__content,
+.modal--animate-translate-left.modal--is-visible .modal__content {
+    transform: scale(1);
+    /* reset all transformations */
   }
+
   .modal--animate-slide-up,
-  .modal--animate-slide-down,
-  .modal--animate-slide-right,
-  .modal--animate-slide-left {
+.modal--animate-slide-down,
+.modal--animate-slide-right,
+.modal--animate-slide-left {
     --modal-transition-duration: 0.3s;
     transition: opacity 0s var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
   }
   .modal--animate-slide-up .modal__content,
-  .modal--animate-slide-down .modal__content,
-  .modal--animate-slide-right .modal__content,
-  .modal--animate-slide-left .modal__content {
+.modal--animate-slide-down .modal__content,
+.modal--animate-slide-right .modal__content,
+.modal--animate-slide-left .modal__content {
     will-change: transform;
     transition: transform var(--modal-transition-duration) var(--ease-out);
   }
   .modal--animate-slide-up.modal--is-visible,
-  .modal--animate-slide-down.modal--is-visible,
-  .modal--animate-slide-right.modal--is-visible,
-  .modal--animate-slide-left.modal--is-visible {
+.modal--animate-slide-down.modal--is-visible,
+.modal--animate-slide-right.modal--is-visible,
+.modal--animate-slide-left.modal--is-visible {
     transition: background-color var(--modal-transition-duration), visibility 0s;
   }
   .modal--animate-slide-up.modal--is-visible .modal__content,
-  .modal--animate-slide-down.modal--is-visible .modal__content,
-  .modal--animate-slide-right.modal--is-visible .modal__content,
-  .modal--animate-slide-left.modal--is-visible .modal__content {
-    transform: scale(1); /* reset all transformations */
+.modal--animate-slide-down.modal--is-visible .modal__content,
+.modal--animate-slide-right.modal--is-visible .modal__content,
+.modal--animate-slide-left.modal--is-visible .modal__content {
+    transform: scale(1);
+    /* reset all transformations */
   }
+
   /* scale */
   .modal--animate-scale .modal__content {
     transform: scale(0.95);
   }
+
   /* translate */
   .modal--animate-translate-up .modal__content {
     transform: translateY(40px);
   }
+
   .modal--animate-translate-down .modal__content {
     transform: translateY(-40px);
   }
+
   .modal--animate-translate-right .modal__content {
     transform: translateX(-40px);
   }
+
   .modal--animate-translate-left .modal__content {
     transform: translateX(40px);
   }
+
   /* slide */
   .modal--animate-slide-up .modal__content {
     transform: translateY(100%);
   }
+
   .modal--animate-slide-down .modal__content {
     transform: translateY(-100%);
   }
+
   .modal--animate-slide-right .modal__content {
     transform: translateX(-100%);
   }
+
   .modal--animate-slide-left .modal__content {
     transform: translateX(100%);
   }
@@ -3851,7 +3983,8 @@ Usage: codyhouse.co/license
   display: flex;
 }
 
-.modal__loader { /* loader icon */
+.modal__loader {
+  /* loader icon */
   position: fixed;
   top: 0;
   left: 0;
@@ -4006,6 +4139,7 @@ Usage: codyhouse.co/license
   line-height: var(--checkbox-radio-line-height);
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   padding-left: calc(var(--checkbox-radio-size) + var(--checkbox-radio-gap));
@@ -4332,6 +4466,7 @@ Usage: codyhouse.co/license
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -4483,9 +4618,12 @@ Usage: codyhouse.co/license
 }
 
 .slideshow--transition-slide .slideshow__item {
-  animation-duration: var(--slideshow-slide-transition-duration);
-  animation-fill-mode: forwards;
-  animation-timing-function: var(--ease-out);
+  -webkit-animation-duration: var(--slideshow-slide-transition-duration);
+          animation-duration: var(--slideshow-slide-transition-duration);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: var(--ease-out);
+          animation-timing-function: var(--ease-out);
 }
 .slideshow--transition-slide .slideshow__item > * {
   visibility: hidden;
@@ -4496,19 +4634,23 @@ Usage: codyhouse.co/license
 }
 
 .slideshow--transition-slide .slideshow__item--slide-in-left {
-  animation-name: slide-in-left;
+  -webkit-animation-name: slide-in-left;
+          animation-name: slide-in-left;
 }
 
 .slideshow--transition-slide .slideshow__item--slide-in-right {
-  animation-name: slide-in-right;
+  -webkit-animation-name: slide-in-right;
+          animation-name: slide-in-right;
 }
 
 .slideshow--transition-slide .slideshow__item--slide-out-left {
-  animation-name: slide-out-left;
+  -webkit-animation-name: slide-out-left;
+          animation-name: slide-out-left;
 }
 
 .slideshow--transition-slide .slideshow__item--slide-out-right {
-  animation-name: slide-out-right;
+  -webkit-animation-name: slide-out-right;
+          animation-name: slide-out-right;
 }
 
 .slideshow--transition-slide .slideshow__item--slide-out-left,
@@ -4524,10 +4666,29 @@ Usage: codyhouse.co/license
   visibility: visible;
 }
 
+@-webkit-keyframes slide-in-left {
+  0% {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes slide-in-left {
   0% {
     visibility: visible;
     transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    visibility: visible;
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
@@ -4542,6 +4703,15 @@ Usage: codyhouse.co/license
     transform: translateX(0);
   }
 }
+@-webkit-keyframes slide-out-left {
+  0% {
+    visibility: visible;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 @keyframes slide-out-left {
   0% {
     visibility: visible;
@@ -4549,6 +4719,15 @@ Usage: codyhouse.co/license
   }
   100% {
     transform: translateX(100%);
+  }
+}
+@-webkit-keyframes slide-out-right {
+  0% {
+    visibility: visible;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 @keyframes slide-out-right {
@@ -4561,9 +4740,12 @@ Usage: codyhouse.co/license
   }
 }
 .slideshow--transition-prx .slideshow__item {
-  animation-duration: var(--slideshow-prx-transition-duration);
-  animation-fill-mode: forwards;
-  animation-timing-function: var(--ease-out);
+  -webkit-animation-duration: var(--slideshow-prx-transition-duration);
+          animation-duration: var(--slideshow-prx-transition-duration);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: var(--ease-out);
+          animation-timing-function: var(--ease-out);
 }
 .slideshow--transition-prx .slideshow__item > * {
   visibility: hidden;
@@ -4574,19 +4756,23 @@ Usage: codyhouse.co/license
 }
 
 .slideshow--transition-prx .slideshow__item--prx-in-left {
-  animation-name: prx-in-left;
+  -webkit-animation-name: prx-in-left;
+          animation-name: prx-in-left;
 }
 
 .slideshow--transition-prx .slideshow__item--prx-in-right {
-  animation-name: prx-in-right;
+  -webkit-animation-name: prx-in-right;
+          animation-name: prx-in-right;
 }
 
 .slideshow--transition-prx .slideshow__item--prx-out-left {
-  animation-name: prx-out-left;
+  -webkit-animation-name: prx-out-left;
+          animation-name: prx-out-left;
 }
 
 .slideshow--transition-prx .slideshow__item--prx-out-right {
-  animation-name: prx-out-right;
+  -webkit-animation-name: prx-out-right;
+          animation-name: prx-out-right;
 }
 
 .slideshow--transition-prx .slideshow__item--prx-out-left,
@@ -4602,10 +4788,29 @@ Usage: codyhouse.co/license
   visibility: visible;
 }
 
+@-webkit-keyframes prx-in-left {
+  0% {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes prx-in-left {
   0% {
     visibility: visible;
     transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes prx-in-right {
+  0% {
+    visibility: visible;
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
@@ -4620,6 +4825,17 @@ Usage: codyhouse.co/license
     transform: translateX(0);
   }
 }
+@-webkit-keyframes prx-out-left {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(40%);
+  }
+}
 @keyframes prx-out-left {
   0% {
     opacity: 1;
@@ -4629,6 +4845,17 @@ Usage: codyhouse.co/license
   100% {
     opacity: 0.3;
     transform: translateX(40%);
+  }
+}
+@-webkit-keyframes prx-out-right {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(-40%);
   }
 }
 @keyframes prx-out-right {
@@ -4645,6 +4872,7 @@ Usage: codyhouse.co/license
 .slideshow[data-swipe=on] .slideshow__content {
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .slideshow[data-swipe=on] .slideshow__content img {
@@ -4781,6 +5009,7 @@ Usage: codyhouse.co/license
   .slideshow__navigation {
     height: 40px;
   }
+
   .slideshow__nav-item button {
     font-size: 10px;
   }
@@ -4880,7 +5109,8 @@ Usage: codyhouse.co/license
 
 .exp-lightbox--no-transition .slideshow__content * {
   transition: none !important;
-  animation: none !important;
+  -webkit-animation: none !important;
+          animation: none !important;
 }
 
 .exp-lightbox__media {
@@ -4922,6 +5152,7 @@ Usage: codyhouse.co/license
   pointer-events: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
