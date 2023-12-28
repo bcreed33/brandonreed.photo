@@ -1461,12 +1461,12 @@ h3 {
 
 .photo5 {
   flex-grow: 1;
-  background-image: url(../img/photos/baseball/baseball-photo29.jpg);
+  background-image: url(../img/photos/baseball/baseball-photo1.jpg);
 }
 
 .photo6 {
   flex-grow: 1;
-  background-image: url(../img/photos/steeline/steeline-photo19.jpg);
+  background-image: url(../img/photos/rugby/rugby-photo16.jpg);
   display: none;
 }
 @media (min-width: 48rem) {
@@ -1477,7 +1477,7 @@ h3 {
 
 .photo7 {
   flex-grow: 1;
-  background-image: url(../img/photos/basketball/bball-photo21.jpg);
+  background-image: url(../img/photos/baseball/baseball-photo4.jpg);
 }
 
 .photo8 {
@@ -1493,7 +1493,7 @@ h3 {
 
 .photo9 {
   flex-grow: 1;
-  background-image: url(../img/photos/other/other-photo6.jpg);
+  background-image: url(../img/photos/athlete/athlete-photo16.jpg);
 }
 
 .photo10 {
@@ -1503,7 +1503,7 @@ h3 {
 
 .photo11 {
   flex-grow: 1;
-  background-image: url(../img/photos/psl/psl-photo21.jpg);
+  background-image: url(../img/photos/team/team-photo17.jpg);
   display: none;
 }
 @media (min-width: 48rem) {
@@ -1514,7 +1514,7 @@ h3 {
 
 .photo12 {
   flex-grow: 1;
-  background-image: url(../img/photos/basketball/bball-photo14.jpg);
+  background-image: url(../img/photos/rugby/rugby-photo7.jpg);
   background-position: 50% 15%;
 }
 
