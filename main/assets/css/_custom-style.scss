@@ -154,7 +154,7 @@ background-position: 50% 25%;
 
 .photo2{
     flex-grow: 1;
-    background-image:url(../img/photos/team/team-photo10.jpg);
+    background-image:url(../img/photos/team/team-photo4.jpg);
     display: none;
 @media (min-width: 48rem) {
     display: flex;
@@ -163,14 +163,14 @@ background-position: 50% 25%;
 
 .photo3{
     flex-grow: 1;
-background-image:url(../img/photos/team/team-photo5.jpg);
+background-image:url(../img/photos/team/team-photo10.jpg);
 background-position: 50% 25%;
 
 }
 
 .photo4{
     flex-grow: 1;
-    background-image:url(../img/photos/football/football-photo12.jpg);}
+    background-image:url(../img/photos/football/football-photo25.jpg);}
 
 
 
@@ -415,6 +415,7 @@ box-shadow: 0 5px 25px 5px rgba(1,1,1,.1);
 }
 .headerIGLogoLink{
     height: 45px;
+    padding: 0 5px;
 }
 .headerIG-logo{
     width: 40px;

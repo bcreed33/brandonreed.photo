@@ -12134,7 +12134,7 @@ h3 {
 
 .photo2 {
   flex-grow: 1;
-  background-image: url(../img/photos/team/team-photo10.jpg);
+  background-image: url(../img/photos/team/team-photo4.jpg);
   display: none;
 }
 @media (min-width: 48rem) {
@@ -12145,13 +12145,13 @@ h3 {
 
 .photo3 {
   flex-grow: 1;
-  background-image: url(../img/photos/team/team-photo5.jpg);
+  background-image: url(../img/photos/team/team-photo10.jpg);
   background-position: 50% 25%;
 }
 
 .photo4 {
   flex-grow: 1;
-  background-image: url(../img/photos/football/football-photo12.jpg);
+  background-image: url(../img/photos/football/football-photo25.jpg);
 }
 
 .photo5 {
@@ -12275,7 +12275,7 @@ h3 {
 }
 
 .FootballImg {
-  background-image: url(../img/photos/football/football-photo1.jpg);
+  background-image: url(../img/photos/football/football-photo2.jpg);
 }
 
 .RugbyImg {
@@ -12371,11 +12371,12 @@ h3 {
 }
 
 .headerIGLogoLink {
-  height: 45px;
+  height: 35px;
+  padding: 0 10px;
 }
 
 .headerIG-logo {
-  width: 40px;
+  width: 35px;
 }
 
 footer {
