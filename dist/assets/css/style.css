@@ -582,6 +582,9 @@ s {
 .aspect-ratio-4\:5 {
   --aspect-ratio: calc(4/5);
 }
+.aspect-ratio-1\:1 {
+  --aspect-ratio: calc(1/1);
+}
 
 .block {
   display: block;
@@ -1580,7 +1583,11 @@ h3 {
 }
 
 .FootballImg {
-  background-image: url(../img/photos/football/football-photo2.jpg);
+  background-image: url(../img/photos/football/2.jpg);
+}
+
+.LaxImg {
+  background-image: url(../img/photos/lacrosse/lax6.jpg);
 }
 
 .RugbyImg {
